@@ -1,6 +1,6 @@
 package Model;
 
-import Model.GameData.*;
+import Model.Data.*;
 
 import java.util.List;
 

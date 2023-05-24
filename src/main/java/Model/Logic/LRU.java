@@ -1,8 +1,6 @@
-package Model.GameLogic;
+package Model.Logic;
 
 import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
 
 public class LRU implements CacheReplacementPolicy {
     HashSet<String> cache=new HashSet<>();
