@@ -1,6 +1,5 @@
-package Model.GameLogic;
+package Model.Logic;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;

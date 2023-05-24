@@ -1,4 +1,4 @@
-package Model.GameLogic;
+package Model.Logic;
 
 
 import java.io.InputStream;

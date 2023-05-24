@@ -1,4 +1,4 @@
-package Model.GameData;
+package Model.Data;
 import java.util.ArrayList;
 
 public class Board {
