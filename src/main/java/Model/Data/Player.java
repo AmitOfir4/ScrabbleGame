@@ -23,10 +23,10 @@ public class Player implements Serializable {
 
 
     public String completeTilesTo7() {
-        while (this.get_hand().size() < 7) {
+        while (this.getHand().size() < 7) {
             if (Tile.Bag.getBag().size() == 0)
                 break;
-            this.get_hand().add(Tile.Bag.getBag().getRand());
+            this.getHand().add(Tile.Bag.getBag().getRand());
         }
         return this.socketID;
     }
@@ -39,13 +39,13 @@ public class Player implements Serializable {
 
 
     public boolean isRackEmpty() {
-        return Tile.Bag.getBag().size() == 0 && this.get_hand().isEmpty();
+        return Tile.Bag.getBag().size() == 0 && this.getHand().isEmpty();
 
     }
 
 
     public Tile charToTile(char c) {
-        for (Tile t : this.get_hand()) {
+        for (Tile t : this.getHand()) {
             if (t.letter == c) {
                 return t;
             }
@@ -66,28 +66,28 @@ public class Player implements Serializable {
     }
 
 
-    public int get_index() {
+    public int getIndex() {
         return index;
     }
 
 
-    public void set_index(int _index) {
+    public void setIndex(int _index) {
         this.index = _index;
     }
 
 
-    public String get_socketID() {
+    public String getSocketID() {
         return this.socketID;
     }
 
 
-    public void set_socketID(String socketID) {
+    public void setSocketID(String socketID) {
         this.socketID = socketID;
 
     }
 
 
-    public List<Tile> get_hand() {
+    public List<Tile> getHand() {
         return hand;
     }
 
@@ -101,7 +101,7 @@ public class Player implements Serializable {
     }
 
 
-    public void set_score(int _score) {
+    public void setScore(int _score) {
         if (_score >= 0)
             this.score = _score;
         else {
@@ -110,17 +110,17 @@ public class Player implements Serializable {
     }
 
 
-    public String get_name() {
+    public String getName() {
         return name;
     }
 
 
-    public void set_name(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
     public void updateHand(List<Tile> inObject) {
-        this.get_hand().clear();
-        this.get_hand().addAll(inObject);
+        this.getHand().clear();
+        this.getHand().addAll(inObject);
     }
 }

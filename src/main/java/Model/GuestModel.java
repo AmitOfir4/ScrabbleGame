@@ -1,7 +1,10 @@
 package Model;
+
 import Model.Data.*;
+
 import java.net.Socket;
 import java.util.List;
+
 import Model.Logic.ClientCommunicationHandler;
 
 
@@ -16,7 +19,7 @@ public class GuestModel implements Model {
 
     @Override
     public void setPlayerProperties(String name) {
-
+        this.player.set_name(name);
     }
 
     @Override
@@ -26,12 +29,12 @@ public class GuestModel implements Model {
 
     @Override
     public int getCurrentPlayerScore() {
-        return 0;
+        return player.get_score();
     }
 
     @Override
     public List<Tile> getCurrentPlayerHand() {
-        return null;
+        return player.get_hand();
     }
 
     @Override
