@@ -96,7 +96,7 @@ public class Player implements Serializable {
     }
 
 
-    public int get_score() {
+    public int getScore() {
         return score;
     }
 

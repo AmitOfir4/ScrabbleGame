@@ -143,7 +143,6 @@ public class MyServer {
     }
 
     public void updateSpecificPlayer(String id, Object obj) {
-
         Socket s = clientsMap.get(id);
         PrintWriter out;
         try {

@@ -19,7 +19,7 @@ public class GuestModel implements Model {
 
     @Override
     public void setPlayerProperties(String name) {
-        this.player.set_name(name);
+        this.player.setName(name);
     }
 
     @Override
@@ -29,12 +29,12 @@ public class GuestModel implements Model {
 
     @Override
     public int getCurrentPlayerScore() {
-        return player.get_score();
+        return player.getScore();
     }
 
     @Override
     public List<Tile> getCurrentPlayerHand() {
-        return player.get_hand();
+        return player.getHand();
     }
 
     @Override
