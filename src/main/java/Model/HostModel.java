@@ -1,31 +1,24 @@
 package Model;
 
 import Model.GameData.*;
-import Model.GameLogic.MyServer;
+import Model.GameLogic.*;
 
+import java.io.IOException;
 import java.net.Socket;
 import java.util.*;
-
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.locks.LockSupport;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+
+
 
 public class HostModel implements Model {
-    private final AtomicBoolean challengeActivated = new AtomicBoolean(false);
-    public ArrayList<Word> currentPlayerWords;
-    public int currentPlayerIndex = 0;
-    public boolean gameIsOver = false;
-    public System.Logger hostLogger = System.getLogger("HostLogger");
-    HostCommunicationHandler communicationHandler = new HostCommunicationHandler();
-    MyServer communicationServer;
-    Socket gameSocket;
-    Board board;
-    Tile.Bag bag;
-    Player player;
-    Map<String, String> playerToSocketID = new HashMap<>();
-    ExecutorService executor = Executors.newSingleThreadExecutor();
-    String challengeInfo;
-    private List<Player> players;
     @Override
     public void setPlayerProperties(String name) {
 
